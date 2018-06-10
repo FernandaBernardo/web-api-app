@@ -19,17 +19,17 @@ body {
     text-align: center;
 }
 
-.signup {
+#login {
     padding: 5%;
 }
 
-.signup label {
+#login label {
     display: block;
     margin-top: 1em;
     margin-bottom: 0.5em;
 }
 
-.signup input {
+#login input {
     width: 100%;
     color: #7d7873;
     font-size: 0.8em;
@@ -40,21 +40,17 @@ body {
     border-radius: 5px;
 }
 
-.signup input:not(input[type="submit"]):focus {
+#login input:not(input[type="submit"]):focus {
     box-shadow: 0 0 2px #52A8EC;
     border-color: #52A8EC;
     outline: 0;
 }
 
-.signup input[type="submit"] {
+#login input[type="submit"] {
     background-color: #359c9c;
     color: #fff;
     margin-top: 2em;
     font-size: 1em;
-}
-
-.signup .optional {
-    color: #999;
 }
 
 label[for="password"] {
