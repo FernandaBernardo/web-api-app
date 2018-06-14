@@ -24,12 +24,30 @@ if(window.PasswordCredential && 'credentials' in navigator) {
     }
 
     function doLogin(user, pwd) {
-        let pwdCredential = new window.PasswordCredential({
-            id: user,
-            password: pwd
+        return authenticate(user, pwd).then(resp => {
+            let pwdCredential = new window.PasswordCredential({
+                id: user,
+                password: pwd
+            });
+            
+            navigator.credentials.store(pwdCredential);
         });
+    }
+    
+    function authenticate(user, pwd) {
+        let payload = {
+            user: user, 
+            password: pwd 
+        };
 
-        navigator.credentials.store(pwdCredential);
+        return fetch('/login', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        });
     }
 
     autoSignin();
