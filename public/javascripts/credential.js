@@ -40,13 +40,15 @@ if(window.PasswordCredential && 'credentials' in navigator) {
             password: pwd 
         };
 
-        return fetch('/login', {
+        return fetch('/', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(payload)
+        }).then(json => {
+            window.location.replace(json.url);
         });
     }
 
