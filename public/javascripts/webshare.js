@@ -2,7 +2,7 @@ if (navigator.share) {
     var buttonShare = document.querySelector('.share');
     buttonShare.addEventListener('click', function() {
         navigator.share({
-            title: document.title,
+            title: document.title + ' - Web Share API',
             url: window.location.href,
         })
           .then(() => console.log('Successful share'))

@@ -56,3 +56,35 @@ body {
 label[for="password"] {
     display: inline-block;
 }
+
+.welcome {
+    font-size: 1.2em;
+    margin: 1em;
+}
+
+.product-img {
+    display: block;
+    margin: 0.5em auto;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px #444;
+}
+
+.share {
+    padding: 0.5em 1em;
+    border-radius: 3px;
+    background-color: #52A8EC;
+    color: white;
+    font-size: 1.2em;
+    display: block;
+    margin: 1em auto;
+}
+
+.buy {
+    padding: 0.5em 1em;
+    border-radius: 3px;
+    background-color: #359c9c;
+    color: white;
+    font-size: 1.2em;
+    display: block;
+    margin: 1em auto;
+}
