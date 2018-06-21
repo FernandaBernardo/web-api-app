@@ -62,6 +62,13 @@ label[for="password"] {
     margin: 1em;
 }
 
+.welcome + a {
+    text-align: center;
+    display: block;
+    margin-bottom: 1em;
+    color: #444;
+}
+
 .product-img {
     display: block;
     margin: 0.5em auto;
@@ -87,4 +94,19 @@ label[for="password"] {
     font-size: 1.2em;
     display: block;
     margin: 1em auto;
+}
+
+.description {
+    margin: 1em;
+    text-align: justify;
+}
+
+.speak {
+    padding: 0.5em 1em;
+    border-radius: 3px;
+    background-color: purple;
+    color: white;
+    display: block;
+    margin: 1em auto;
+    font-size: 1.2em;
 }

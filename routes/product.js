@@ -5,4 +5,8 @@ router.get('/', (req, res) => {
   res.render('product');
 });
 
+router.get('/description', (req, res) => {
+  res.render('description');
+});
+
 module.exports = router;
