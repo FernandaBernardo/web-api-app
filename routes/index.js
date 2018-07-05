@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/', (req, resp) => {
+router.get('/', (req, res) => {
   if(req.session && req.session.user) {
       res.render('product');
   } else {
-      resp.render('index');
+      res.render('index');
   }
 });
 
@@ -17,6 +17,10 @@ router.post('/', (req, res) => {
       req.session.user = user;
       return res.redirect('/product');
   }
+});
+
+router.get('/logout', (req, res) => {
+    res.render('index');
 });
 
 module.exports = router;
